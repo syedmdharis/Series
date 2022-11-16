@@ -1,0 +1,18 @@
+﻿@page "{seriesID:int}"
+@model Series.DetailModel
+@{
+    ViewData["Title"] = "Series Details";
+}
+
+<h2>@Model.seriesCollection.Name</h2>
+<div>
+    ID: @Model.seriesCollection.Id
+</div>
+<div>
+    Name: @Model.seriesCollection.Name 
+</div>
+<div>
+    Genre: @Model.seriesCollection.Genre
+</div>
+
+<a asp-page="./List" class="btn btn-link">All series</a>

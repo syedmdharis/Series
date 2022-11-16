@@ -1,7 +1,10 @@
+using Series.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddSingleton<ISeriesData, InMemorySeriesData>();
 
 var app = builder.Build();
 
